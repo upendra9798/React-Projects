@@ -1,12 +1,11 @@
+import "./App.css";  
+import HeroSection from "./components/Hero";
+import Navigation from "./components/Navigation";
 const App = () => {   // Component-(name start with capital letter)
   return (
     <div>
-     <nav>
-      {/* in js classname is used in place of class in html */}
-      <div className="logo">
-        
-        </div>   
-     </nav>
+    <Navigation/>
+    <HeroSection/>
   </div>
   );
 };
