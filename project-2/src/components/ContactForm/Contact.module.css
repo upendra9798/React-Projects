@@ -1,0 +1,60 @@
+/* Giving same class name as in App.jsx but this will not overwrite the previous css
+because of module */
+.container{
+    display: flex;
+    /* Items are placed in a row.
+Each item takes only as much width as needed for its content.
+The container only grows as large as its content requires. */
+    max-width: 1000px;
+    margin: 0 auto; 
+    /* no spacing */
+    margin-top: 20px;
+    align-items: end;
+}
+.top_btn{
+    display: flex;
+    gap: 32px;
+}
+
+.contact_form{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.contact_form form{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+.form_control{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    row-gap: 10px;
+}
+.form_control input{
+    height: 40px;
+    padding: 0 8px;
+    /* 0px top & bottom, 8px left & right */
+}
+/* padding	Inside the element (between content & border)	
+margin	Outside the element (between elements) */
+
+/* .form_control textarea{
+   padding: 8px;
+} */
+
+.form_control label {
+    font-size: 14px;  /* Sets the text size of the label */
+    position: absolute;  /* Positions the label relative to the text written in input */
+    top: -12px;  /* Moves the label 12px above its default position */
+    left: 10px;  /* Moves the label 10px to the right */
+    background-color: white;  /* Sets a white background to prevent overlap with input fields */
+    padding: 0 10px;  /* Adds horizontal padding (10px on left & right, 0px on top & bottom) */
+    margin-bottom: 10px; 
+}
+.form_control text{
+    letter-spacing: 2px;
+}

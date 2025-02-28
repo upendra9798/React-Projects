@@ -10,6 +10,11 @@
 *{
   margin: 0;
 }
+html, body {
+  height: 100%;
+  overflow: hidden; /* Prevents unwanted scrolling */
+}
+
 
 body {
   font-family: "Poppins", sans-serif;
@@ -19,3 +24,11 @@ body {
     max-width: 1280px;
   }
 
+.main_container{
+  display: flex;
+  /* height: calc(100vh-72px); */
+  /* height: calc(100vh - 72px); (to remove scrolling 72px-navbar height) */
+  /* The calc() function requires spaces around the operator (-) */
+  flex-direction: column;
+  justify-content: end;
+}
