@@ -1,42 +1,54 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+    overflow: hidden;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.container{
+    width: 100%; /* Ensure full-width usage */
+    width: 1182px;
+    height: 552px;
+    display: flex;
+    /* border: solid blue 2px; */
+    /* justify-content: center; */
+    align-items:center;
+    margin: 100px auto;
+    gap: 5px;
+    justify-content: space-between; 
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.front_content{
+    width: 528px;
+    height: 188px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* text-align: right; */
+  
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+p{
+    /* width: 528px; //No need
+    height: 40px; */
+    font-size: 96px;
+    font-weight: 700;
+    white-space: nowrap;
+    margin: 0;
+}
+button{
+    width: 220px;
+    height: 44px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    /* the cursor changes to a hand (pointer) indicating it's clickable. */
+    margin-top: 20px; /* Space between text and button */
+    
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/*
+Setting margin: 0; for the <p> element is important because:
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
+1️⃣ Removes Default Browser Margins
+Browsers automatically apply margins to <p> tags (usually margin: 16px 0; in most browsers).
+This unwanted space can mess up your layout, especially in flexbox or grid-based designs.
+By setting margin: 0;, you eliminate extra spacing and get full control over positioning.
+*/
