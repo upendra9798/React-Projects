@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const Front_page = () =>{
+const Front_page = ({toggle}) =>{
     return (
         <section className="container">
             <div>
@@ -10,7 +10,7 @@ const Front_page = () =>{
 
             <div className='front_content'>
                 <p>DICE GAME</p>
-                <button>Play Now</button>
+                <button onClick={toggle} >Play Now</button>
             </div>
         </section>
     )

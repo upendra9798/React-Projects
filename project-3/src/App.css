@@ -2,18 +2,27 @@ body {
     overflow: hidden;
 }
 
-.container{
+.container {
+    /* width: 100%;
+    max-width: 1182px;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    /* align-items: center;
+    margin: 50px auto;
+    gap: 10px;
+    overflow: visible; Ensure child elements are visible */ 
     width: 100%; /* Ensure full-width usage */
-    width: 1182px;
-    height: 552px;
+   max-width: 1182px;
     display: flex;
     /* border: solid blue 2px; */
     /* justify-content: center; */
     align-items:center;
-    margin: 100px auto;
+    margin: 50px auto;
     gap: 5px;
     justify-content: space-between; 
+    overflow: visible;
 }
+
 .front_content{
     width: 528px;
     height: 188px;
@@ -26,12 +35,16 @@ body {
 p{
     /* width: 528px; //No need
     height: 40px; */
-    font-size: 96px;
+    font-size: 86px;
     font-weight: 700;
-    white-space: nowrap;
+    white-space: nowrap;  /* To maintain the text in one line*/
     margin: 0;
+    /*
+Setting margin: 0; for the <p> element is important because: Removes Default Browser Margins
+Browsers automatically apply margins to <p> tags (usually margin: 16px 0; in most browsers).
+*/
 }
-button{
+.container button{
     width: 220px;
     height: 44px;
     background-color: black;
@@ -40,15 +53,126 @@ button{
     font-size: 18px;
     cursor: pointer;
     /* the cursor changes to a hand (pointer) indicating it's clickable. */
-    margin-top: 20px; /* Space between text and button */
-    
+    margin-top: 10px; /* Space between text and button */ 
 }
 
-/*
-Setting margin: 0; for the <p> element is important because:
+button:hover{
+    background-color: white;
+    color: black;
+    transition: 0.3s background ease-in;
+}
 
-1️⃣ Removes Default Browser Margins
-Browsers automatically apply margins to <p> tags (usually margin: 16px 0; in most browsers).
-This unwanted space can mess up your layout, especially in flexbox or grid-based designs.
-By setting margin: 0;, you eliminate extra spacing and get full control over positioning.
-*/
+/* Start game navbar css*/
+.navbar{
+    width: 1280px;
+    height: 60px;
+    /* border: 2px solid blue; */
+    /* margin: 55px 80px; */
+    margin: 20px 80px 75px 80px;
+    display: flex;
+    gap: 593px;
+}
+.score{
+    width: 135px;
+    height: 151px;
+    gap: 3px;
+}
+.score h1{
+    line-height: 90px;
+    font-size: 80px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    margin-right: 30px;
+}
+.score h3{
+    font-weight: 600;
+}
+.select-number{
+    width: 552px;
+    height: 138px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 25px;
+    position: relative; 
+}
+.error-container {
+    position: absolute;
+    top: -20px; /* Move it up slightly */
+    right: 0;
+    width: 100%;
+    margin-top: 10px;
+    text-align: right; /* Align error text with number buttons */
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin: 0; /* Remove default margin */
+}
+.numbers{
+    display: flex;
+    gap: 24px;
+    margin-top: 20px;
+}
+button{
+    width: 52px;
+    height: 52px;
+    background-color: white;
+    color: black;
+    font-weight: 750; /* Optional: Makes the numbers bolder */
+    border: solid black 2px;
+    /* line-height: 36px; */
+    font-size: 18px;
+}
+
+
+/* dice roll css */
+.dice-roll {
+    width: 250px;
+    min-height: 449px; /* Use min-height instead of fixed height */
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.dice-roll h2{
+    font-weight: 550;
+}
+/* .container button.reset-btn{
+    background-color: white;
+    color: black;
+} */
+ 
+.reset-btn {
+    background-color: white !important;
+    color: black !important;
+}
+
+img{
+    cursor: pointer;
+}
+
+
+
+
+.rule {
+    max-width: 800px;
+    min-height: auto; /* Change from fixed height */
+    margin: 20px auto;
+    background-color: #f9f3f3;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: visible; /* Ensures content is visible */
+    display: block;
+}
+.rule p {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+    
