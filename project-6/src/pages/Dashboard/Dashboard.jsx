@@ -4,6 +4,7 @@ import PortfolioSection from "./components/PortfolioSection";
 import PriceSection from "./components/PriceSection";
 import { Grid, GridItem } from "@chakra-ui/react";
 import Transactions from "./components/Transactions";
+import InfoCard from "./components/InfoCard";
 
 
 const Dashboard = ({}) => {
@@ -27,12 +28,27 @@ const Dashboard = ({}) => {
         <GridItem colSpan={1}>
           <PriceSection />
         </GridItem>
+
         <GridItem colSpan={1}>
          <Transactions/>
         </GridItem>
+
         <GridItem colSpan={1}>
+          <InfoCard
+            imgUrl="/dot_bg.svg"
+            text=" Learn more about Loans – Keep your Bitcoin, access it’s value without
+          selling it"
+            tagText="Loan"
+            inverted={false}
+          />
         </GridItem>
         <GridItem colSpan={1}>
+          <InfoCard
+            inverted={true}
+            tagText="Contact"
+            imgUrl="/grid_bg.svg"
+            text="Learn more about our real estate, mortgage, and  corporate account services"
+          />
         </GridItem>
       </Grid>
     </DashboardLayout>

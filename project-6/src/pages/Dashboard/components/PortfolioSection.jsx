@@ -5,7 +5,6 @@ import {
   AiOutlineArrowUp,
   AiOutlineInfoCircle,
 } from "react-icons/ai";
-import { CustomCard } from "../../../chakra/CustomCard";
 
 const PortfolioSection = () => {
   return (

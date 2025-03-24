@@ -65,7 +65,7 @@ It arranges its children horizontally (row-wise). */}
           <Tabs.Root variant="enclosed" maxW="md" defaultValue="tab-1">
       {/* Align Tabs to the Right */}
       <Flex justify="end">
-        <Tabs.List style={{ display: "flex", gap: "4px", background: "#F3F4F6", padding: "4px", borderRadius: "6px",
+        <Tabs.List style={{ display: "flex", gap: "4px", background: "#F3F4F6", borderRadius: "6px",
           fontSize: "xs", padding: "6px 10px"
          }}>
           <Tabs.Trigger value="tab-1">1H</Tabs.Trigger>

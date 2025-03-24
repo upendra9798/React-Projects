@@ -22,7 +22,14 @@ const DashboardLayout = ({ title, children }) => {
         {/* TopNav with onOpen passed for mobile menu toggle */}
         <TopNav title={title} />
         
-        <Container maxW="1200px" mt="4" mx="auto" px="11">
+        <Container overflow="hidden"  // Prevents horizontal scrolling
+  overflowY="auto"
+        // h="calc(100vh-88px)"
+        h="calc(100vh - 88px)" //remember to give space otherwise it will not work
+         maxW="1200px"
+          mt="4"
+           mx="auto"
+            px="11">
           {children}
         </Container>
       </Box>
